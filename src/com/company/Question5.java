@@ -1,5 +1,6 @@
 package com.company;
 
+import javax.swing.*;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -33,8 +34,8 @@ public class Question5 {
         Scanner scanner = new Scanner(System.in);
 
         for (int uniqueRandomNumber : uniqueRandomNumbers) {
-            System.out.println(questions[uniqueRandomNumber]);
-            boolean answer = scanner.nextBoolean();
+//            System.out.println();
+            boolean answer = Boolean.parseBoolean(JOptionPane.showInputDialog(questions[uniqueRandomNumber]));
             responses[uniqueRandomNumber] = answer;
         }
     }
